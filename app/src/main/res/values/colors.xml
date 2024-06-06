@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sign_btn_ripple">#42858a</color>
+    <color name="sign_btn_color">#33afb8</color>
+    <color name="register_btn_ripple">#1f7d3b</color>
+    <color name="register_btn_color">#1bc44e</color>
+    <color name="send_accountant_data_color">#73E178</color>
+    <color name="send_accountant_stroke_color">#174F82</color>
+    <color name="send_dispatcher_data_color">#240EA6</color>
+    <color name="send_dispatcher_stroke_color">#66DB22</color>
+    <color name="accountant_background_color">#174F82</color>
+    <color name="accountant_stroke_color">#73E178</color>
+    <color name="dispatcher_background_color">#66DB22</color>
+    <color name="dispatcher_stroke_color">#240EA6</color>
+    <color name="passenger_background_color">#926DF4</color>
+    <color name="passenger_stroke_color">#0518FA</color>
+    <color name="passenger_strokes_color">#1FCD00</color>
+    <color name="director_background_color">#98F4ED</color>
+    <color name="director_stroke_color">#121E13</color>
+    <color name="accountant_report_background">#C149FE</color>
+    <color name="accountant_report_stroke">#C6F268</color>
+    <color name="dispatcher_report_background">#1D760A</color>
+    <color name="dispatcher_report_stroke">#5DB3B1</color>
+    <color name="passengers_report_background">#D6F272</color>
+    <color name="passengers_report_stroke">#0D57F4</color>
+
+</resources>

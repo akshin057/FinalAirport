@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
+            android:gravity="center"
+            android:text="Корпоративное приложение аэропорта Домодедово"
+            android:textColor="#072f6b"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/textBottomTV"
+        android:layout_margin="15sp"
+        >
+
+        <android.widget.Button
+            android:id="@+id/signBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Войти"
+            android:textColor="@color/white"
+            android:fontFamily="@font/adamina"
+            android:layout_marginRight="6sp"
+            android:background="@drawable/sign_btn"
+            />
+
+        <android.widget.Button
+            android:id="@+id/registerBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Зарегистрироваться"
+            android:fontFamily="@font/adamina"
+            android:layout_marginLeft="6sp"
+            android:background="@drawable/register_btn"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textBottomTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/adamina"
+        android:gravity="center"
+        android:text="Войдите или зарегистрируйтесь"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

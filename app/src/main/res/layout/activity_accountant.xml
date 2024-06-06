@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountantActivity"
+    android:background="@color/accountant_background_color">
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Отчетность"
+        android:textSize="36sp"
+        android:textColor="@color/accountant_stroke_color"
+        android:layout_marginTop="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/firstLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:weightSum="1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/dataTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите дату:"
+            android:textSize="20sp"
+            android:textColor="@color/accountant_stroke_color"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/dateET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ДДММГГГГ"
+            android:inputType="date"
+            android:textSize="20sp"
+            android:textColor="@color/accountant_stroke_color"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/secondLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/firstLineLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выручка"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="30sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="30sp"
+        app:layout_constraintTop_toBottomOf="@id/secondLineLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dispatcherIncomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выручка от диспетчерской"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="1.7"
+            />
+
+        <EditText
+            android:id="@+id/dispatcherIncomeET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:hint="Сумма в рублях"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fourthLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="30sp"
+        app:layout_constraintTop_toBottomOf="@id/thirdLineLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rentIncomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выручка от арендаторов"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="1.7"
+            />
+
+        <EditText
+            android:id="@+id/rentIncomeET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:hint="Сумма в рублях"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fifthLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="30sp"
+        app:layout_constraintTop_toBottomOf="@id/fourthLineLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/planesIncomeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выручка от сервисов"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="1.7"
+            />
+
+        <EditText
+            android:id="@+id/planesIncomeET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/accountant_stroke_color"
+            android:textSize="18sp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:hint="Сумма в рублях"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fifthLineLL">
+
+        <android.widget.Button
+            android:id="@+id/sendDataBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отправить данные"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="@color/accountant_background_color"
+            android:background="@drawable/accountant_btn"
+            />
+
+        <android.widget.Button
+            android:id="@+id/returnBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вернуться назад"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="@color/accountant_background_color"
+            android:background="@drawable/accountant_btn"
+            />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

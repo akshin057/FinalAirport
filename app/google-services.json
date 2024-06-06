@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "194954883490",
+    "project_id": "airport-17ba9",
+    "storage_bucket": "airport-17ba9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194954883490:android:424e99614f1d56d3d502fb",
+        "android_client_info": {
+          "package_name": "com.example.finalairport"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDICGtIeEhrzNywHZsfj9skrUZrCGtcNTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

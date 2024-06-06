@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PassengersReport"
+    android:background="@color/passengers_report_background">
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отчет за:"
+        android:textColor="@color/passengers_report_stroke"
+        android:textSize="35sp"
+        android:layout_gravity="left"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="График регистрации пассажиров за сутки"
+        android:textColor="@color/passengers_report_stroke"
+        android:layout_marginTop="40sp"
+        android:textSize="30sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTV" />
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphGV"
+        android:layout_width="match_parent"
+        android:layout_height="400sp"
+        app:layout_constraintBottom_toTopOf="@id/returnBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <android.widget.Button
+        android:id="@+id/returnBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/passengers_report_btn"
+        android:text="Вернуться назад"
+        android:textColor="@color/passengers_report_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

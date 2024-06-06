@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DispatcherActivity"
+    android:background="@color/dispatcher_background_color">
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Диспетчерская отчетность"
+        android:textSize="30sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/dispatcher_stroke_color"
+        />
+
+    <LinearLayout
+        android:id="@+id/dataLineLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:weightSum="1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/dataTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите дату:"
+            android:textSize="20sp"
+            android:textColor="@color/dispatcher_stroke_color"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/dateET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ДДММГГГГ"
+            android:inputType="date"
+            android:textSize="20sp"
+            android:textColor="@color/dispatcher_stroke_color"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Полеты за сутки"
+        android:textSize="30sp"
+        android:layout_marginTop="20sp"
+        android:textColor="@color/dispatcher_stroke_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataLineLL" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_marginTop="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV">
+
+        <LinearLayout
+            android:id="@+id/generalLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/zeroLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/zeroHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/zeroHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/firstLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/firstHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="01:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/firstHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/secondHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="02:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/secondHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/thirdHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="03:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/thirdHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/fourthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="04:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fourthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fifthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/fifthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="05:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fifthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/sixthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="06:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/sixthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seventhLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/seventhHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="07:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/seventhHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eighthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/eighthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="08:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/eighthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ninthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/ninthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="09:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/ninthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="10:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/tenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eleventhLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/eleventhHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="11:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/eleventhHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twelfthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/twelfthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="12:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/twelfthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/thirteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="13:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/thirteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/fourteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="14:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fourteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fifteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/fifteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="15:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fifteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sixteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/sixteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="16:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/sixteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/seventeenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/seventeenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="17:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/seventeenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eighteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/eighteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="18:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/eighteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nineteenthLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/nineteenthHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="19:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/nineteenthHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twentiethLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/twentiethHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="20:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/twentiethHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twentyFirstLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/twentyFirstHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="21:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/twentyFirstHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twentySecondLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/twentySecondHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="22:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/twentySecondHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twentyThirdLineLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/twentyThirdHourTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="23:00"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/twentyThirdHourET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:hint="Количество"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/dispatcher_stroke_color"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" >
+
+        <android.widget.Button
+            android:id="@+id/sendDataBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dispatcher_btn"
+            android:text="Отправить данные"
+            android:textSize="15sp"
+            android:textColor="#66DB22"
+            android:layout_weight="1"
+            />
+
+        <android.widget.Button
+            android:id="@+id/returnBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dispatcher_btn"
+            android:text="Вернуться назад"
+            android:textSize="15sp"
+            android:textColor="#66DB22"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
